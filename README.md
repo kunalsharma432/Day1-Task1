@@ -54,3 +54,34 @@ id  year_birth education marital_status   income  dt_customer
 2  4141        1965 graduation       together  71613.0  2013-08-21
 3  6182        1984        phd        married  26646.0  2014-02-10
 4  5324        1981 graduation       together  58293.0  2014-01-19
+
+** Summary of My Data Cleaning Project :- 
+In this project, I worked on cleaning and preprocessing the Customer Personality Analysis dataset using Python and Pandas. The dataset had issues like missing values, duplicate rows, inconsistent text formatting, and incorrect data types, which I fixed step by step.
+
+Steps I Performed:-
+Loaded the dataset using pandas.read_csv().
+
+Checked for missing values using isnull().sum()
+→ Found some missing values in the Income column and filled them using the median.
+
+Removed duplicate records using drop_duplicates() to ensure the data was unique.
+
+Standardized text columns like Marital_Status and Education
+→ I converted all values to lowercase and removed extra spaces for consistency.
+
+Converted the date column Dt_Customer to proper datetime format using pd.to_datetime().
+
+Renamed all column headers to lowercase and replaced spaces with underscores using str.lower() and str.replace().
+
+Fixed data types
+→ Converted year_birth to int and Income to float to ensure correct analysis later.
+
+Exported the cleaned dataset to a new CSV file cleaned_customer_personality.csv using to_csv().
+
+** What I Learned Most From :-
+The part where I learned the most was:
+
+Handling missing values and standardizing text data.
+I understood how to decide between filling vs. dropping missing values and saw how important it is to clean text fields (like gender, marital status, etc.) for accurate grouping or analysis.
+
+I also learned how small issues like inconsistent casing (Single vs single) or wrong date formats can create big problems in analysis — and how to fix them.
